@@ -17,13 +17,3 @@ Installation
 ------------
 
 About how to install snipMate see [snipmate@garbas](https://github.com/garbas/vim-snipmate)
-
-(Bundle, Pathogen, git clone - keywords to make people find this link by ctrl-f search)
-
-configure https://github.com/garbas/vim-snipmate this way:
-
-```vim
-let g:snipMate = {}
-let g:snipMate.scope_aliases = {}
-let g:snipMate.scope_aliases['ruby'] = 'ruby,ruby-rails,ruby-1.9'
-```

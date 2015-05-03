@@ -1,3 +1,5 @@
+# Documentation
+
 # doc
 snippet doc
 	/**
@@ -14,34 +16,87 @@ snippet docc
 	 */
 	${0}
 
+# docstring
+snippet /**
+	/**
+	 * ${0:description}
+	 *
+	 */
+snippet @par
+	@param {${1:type}} ${2:name} ${0:description}
+snippet @ret
+	@return {${1:type}} ${0:description}
+
+# es6 class
+snippet class
+${1:public }class ${2:`fnamemodify(bufname("%"),":t:r")`} ${3:extends} {
+
+  //--------------------------------------
+  //  CONSTRUCTOR
+  //--------------------------------------
+
+  public $2 (${4:arguments}) {
+    ${0:// expression}
+  }
+}
+
+# Generator function
+snippet gfn
+	function* ${1:name}(${2}) {
+		yield ${3};
+	}
+
+# Arrow function
+snippet =>
+	(${1}) => {
+		${2}
+	}
+
+# Class
+snippet class
+	class ${1:name} {
+		constructor (${2:arg}) {
+			${3:// init}
+		}
+		${4}
+	}
+
+# For of loop
+snippet forof
+	for (let ${1:s} of ${2:sequence}) {
+		${3}
+	}
+
+# Import
+snippet im
+	import ${1:foo} from "${2:bar}"
 
 # Functions
 
-# prototype
-snippet proto
-	${1:class_name}.prototype.${2:method_name} = function(${3}) {
-		${0}
-	};
 # Function
 snippet fun
 	function ${1:function_name}(${2}) {
 		${0}
 	}
+
 # Anonymous Function
 snippet f
 	function(${1}) {
 		${0}
 	}
+
 # Anonymous Function assigned to variable
 snippet vaf
 	var ${1:function_name} = function(${2}) {
 		${0}
 	};
+
 # Function assigned to variable
 snippet vf
 	var ${1:function_name} = function $1(${2}) {
 		${0}
 	};
+
 # Immediate function
 snippet (f
 	(function(${1}) {
@@ -208,18 +263,6 @@ snippet prop
 		}
 	);
 
-# Documentation
-
-# docstring
-snippet /**
-	/**
-	 * ${0:description}
-	 *
-	 */
-snippet @par
-	@param {${1:type}} ${2:name} ${0:description}
-snippet @ret
-	@return {${1:type}} ${0:description}
 
 # JSON
 
